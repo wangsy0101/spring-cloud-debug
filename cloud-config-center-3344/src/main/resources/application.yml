@@ -1,0 +1,36 @@
+server:
+  port: 3344
+
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wangsy0101/spring-cloud-config.git
+          search-paths:
+            - spring-cloud-config
+          username: wangsy0101
+          password: #password  # github密码
+      label: master
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+
+# curl -X POST http://localhost:3344/actuator/bus-refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

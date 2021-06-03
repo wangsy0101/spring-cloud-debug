@@ -1,0 +1,16 @@
+*.class
+*.classpath
+*.project
+*.settings
+/target
+/bin
+/log
+/logs
+*/target
+#Package Files#
+*.jar
+*.war
+*.ear
+*.idea
+*.iml
+*/gen-*/*
