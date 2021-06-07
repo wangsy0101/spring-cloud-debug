@@ -19,6 +19,6 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       # 相互注册
 #      defaultZone: http://eureka7002.com:7002/eureka/
-  server:
-    enable-self-preservation: false  # 关闭自我保护，自我保护即暂时无心跳联系，不直接移除服务
-    eviction-interval-timer-in-ms: 2000
+#  server:
+#    enable-self-preservation: true  # 关闭自我保护，自我保护即暂时无心跳联系，不直接移除服务
+#    eviction-interval-timer-in-ms: 2000
